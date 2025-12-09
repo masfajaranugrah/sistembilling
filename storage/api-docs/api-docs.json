@@ -1,0 +1,291 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Jernihnet",
+        "description": "Dokumentasi API untuk aplikasi pelanggan Jernihnet",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://layanan.jernih.net.id",
+            "description": "Server API"
+        }
+    ],
+    "paths": {
+        "/api/pelanggan/jernihnet/login": {
+            "post": {
+                "tags": [
+                    "Login & Logout"
+                ],
+                "summary": "Login pelanggan menggunakan nomor WhatsApp",
+                "description": "Endpoint untuk login pelanggan dan mendapatkan token",
+                "operationId": "ede535e57b4af321c5a308eede88e9b9",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "no_whatsapp"
+                                ],
+                                "properties": {
+                                    "no_whatsapp": {
+                                        "description": "Nomor WhatsApp pelanggan",
+                                        "type": "string",
+                                        "example": "62812345678"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Login berhasil",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Login berhasil"
+                                        },
+                                        "token": {
+                                            "type": "string",
+                                            "example": "1|HgzMzrBuTgurTt8hVN417o7rJ41qsdcatVdVY0Hxafc6cae2"
+                                        },
+                                        "user": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "a07caaef-51e1-4522-8ba4-67286c3fedb3"
+                                                },
+                                                "nama_lengkap": {
+                                                    "type": "string",
+                                                    "example": "MAS GANTENG"
+                                                },
+                                                "no_whatsapp": {
+                                                    "type": "string",
+                                                    "example": "62812345678"
+                                                },
+                                                "nomer_id": {
+                                                    "type": "string",
+                                                    "example": "JMK.1234"
+                                                },
+                                                "paket_id": {
+                                                    "type": "string",
+                                                    "example": "e5f153f9-03b3-4378-8ae5-b0b5f1f893a4"
+                                                },
+                                                "kabupaten": {
+                                                    "type": "string",
+                                                    "example": "SUKOHARJO"
+                                                },
+                                                "foto_ktp_url": {
+                                                    "type": "string",
+                                                    "nullable": true
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validasi gagal",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "error"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validasi gagal"
+                                        },
+                                        "errors": {
+                                            "properties": {
+                                                "no_whatsapp": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string",
+                                                        "example": "Nomor WhatsApp wajib diisi."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/pelanggan/jernihnet/logout": {
+            "post": {
+                "tags": [
+                    "Login & Logout"
+                ],
+                "summary": "Logout pelanggan",
+                "description": "Hapus token pelanggan saat ini",
+                "operationId": "14954ba00dd72603bb46b52c3e550293",
+                "responses": {
+                    "200": {
+                        "description": "Logout berhasil",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Logout berhasil"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "sanctum": []
+                    }
+                ]
+            }
+        },
+        "/dashboard/customer/tagihan": {
+            "get": {
+                "tags": [
+                    "Tagihan"
+                ],
+                "summary": "Tampilkan halaman tagihan pelanggan",
+                "description": "Endpoint ini menampilkan halaman tagihan pelanggan. Token dikirim sebagai query parameter.",
+                "operationId": "da510a0c848ac89280cc6486309ced5b",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token akses pelanggan",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Halaman tagihan berhasil ditampilkan"
+                    },
+                    "401": {
+                        "description": "Token tidak valid / pelanggan belum login",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "error"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Silakan login terlebih dahulu."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/dashboard/customer/tagihan/selesai": {
+            "get": {
+                "tags": [
+                    "Tagihan"
+                ],
+                "summary": "Tampilkan tagihan pelanggan yang sudah lunas",
+                "description": "Endpoint ini menampilkan tagihan pelanggan dengan status 'lunas'. Token dikirim sebagai query parameter.",
+                "operationId": "328d3c7e6d83078409992f7a4d2331a9",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token akses pelanggan",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Halaman tagihan lunas berhasil ditampilkan"
+                    },
+                    "401": {
+                        "description": "Token tidak valid / pelanggan belum login",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "error"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Silakan login terlebih dahulu."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Login & Logout",
+            "description": "API untuk autentikasi pelanggan"
+        },
+        {
+            "name": "Tagihan",
+            "description": "API untuk halaman tagihan pelanggan"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "sanctum": {
+                "type": "apiKey",
+                "description": "Masukkan token dalam format Bearer <token>",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "sanctum": []
+        }
+    ]
+}

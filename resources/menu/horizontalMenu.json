@@ -1,0 +1,462 @@
+{
+  "menu": [
+    {
+      "menuHeader": "Data Karyawan",
+      "roles": [
+        "administrator",
+        "admin"
+      ]
+    },
+    {
+      "name": "Karyawan",
+      "icon": "menu-icon tf-icons ri-team-line",
+      "slug": "app-user",
+      "roles": [
+        "administrator",
+        "admin"
+      ],
+      "submenu": [
+        {
+          "url": "/dashboard/admin/employees",
+          "name": "List",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-list-check"
+        },
+        {
+          "url": "/dashboard/admin/employees/upload/data",
+          "name": "Upload Excel",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-upload-cloud-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Data Pelanggan",
+      "roles": [
+        "administrator",
+        "admin"
+      ]
+    },
+    {
+      "name": "Pelanggan",
+      "icon": "menu-icon tf-icons ri-user-follow-line",
+      "slug": "app-user",
+      "roles": [
+        "administrator",
+        "admin"
+      ],
+      "submenu": [
+        {
+          "url": "/dashboard/admin/pelanggan",
+          "name": "List",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-list-check"
+        },
+        {
+          "url": "/dashboard/admin/pelanggan/upload/data",
+          "name": "Upload Excel",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-upload-cloud-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Data Paket",
+      "roles": [
+        "administrator",
+        "admin"
+      ]
+    },
+    {
+      "name": "Paket",
+      "icon": "menu-icon tf-icons ri-stack-line",
+      "slug": "app-user",
+      "roles": [
+        "administrator",
+        "admin"
+      ],
+      "submenu": [
+        {
+          "url": "/dashboard/admin/paket",
+          "name": "List",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-list-check"
+        },
+        {
+          "url": "/dashboard/admin/paket/create",
+          "name": "Add Paket",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-add-box-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Data Akun",
+      "roles": [
+        "administrator",
+        "admin"
+      ]
+    },
+    {
+      "name": "Akun",
+      "icon": "menu-icon tf-icons ri-shield-user-line",
+      "slug": "app-user",
+      "roles": [
+        "administrator",
+        "admin"
+      ],
+      "submenu": [
+        {
+          "url": "/dashboard/admin/users",
+          "name": "List",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-list-check"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Data Ticket",
+      "roles": "customer_service"
+    },
+    {
+      "name": "Ticket",
+      "icon": "menu-icon tf-icons ri-ticket-line",
+      "slug": "app-user",
+      "roles": "customer_service",
+      "submenu": [
+        {
+          "url": "/dashboard/cs/tickets",
+          "name": "List",
+          "slug": "app-user-list",
+          "roles": "customer_service",
+          "icon": "ri-list-check"
+        }
+      ]
+    },
+    {
+      "menuHeader": "History",
+      "roles": "customer_service"
+    },
+    {
+      "name": "History Ticket",
+      "icon": "menu-icon tf-icons ri-history-line",
+      "slug": "app-user",
+      "roles": "customer_service",
+      "submenu": [
+        {
+          "url": "/dashboard/admin/history/tickets",
+          "name": "History Ticket",
+          "slug": "app-user-list",
+          "roles": "customer_service",
+          "icon": "ri-time-line"
+        },
+        {
+          "url": "/dashboard/admin/history/login",
+          "name": "History Login",
+          "slug": "app-user-list",
+          "roles": "customer_service",
+          "icon": "ri-login-box-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Data Tagihan",
+      "roles": [
+        "administrator",
+        "admin"
+      ]
+    },
+    {
+      "name": "Tagihan",
+      "icon": "menu-icon tf-icons ri-file-list-3-line",
+      "slug": "app-user",
+      "roles": [
+        "administrator",
+        "admin"
+      ],
+      "submenu": [
+        {
+          "url": "/dashboard/admin/tagihan",
+          "name": "list tagihan",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-list-check"
+        },
+        {
+          "url": "/dashboard/admin/tagihan/proses",
+          "name": "verifikasi tagihan",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-loader-2-line"
+        },
+        {
+          "url": "/dashboard/admin/tagihan/lunas",
+          "name": "list pembayaran lunas",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-check-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Absensi",
+      "roles": "karyawan"
+    },
+    {
+      "name": "Absensi",
+      "icon": "menu-icon tf-icons ri-calendar-check-line",
+      "slug": "app-user",
+      "roles": "karyawan",
+      "submenu": [
+        {
+          "url": "/dashboard/karyawan/data/absensi",
+          "name": "List",
+          "slug": "app-user-list",
+          "roles": ["administrator","admin"],
+          "icon": "ri-list-check"
+        },
+        {
+          "url": "/dashboard/karyawan/absensi",
+          "name": "Absensi",
+          "slug": "app-user-list",
+          "roles": "karyawan",
+          "icon": "ri-checkbox-multiple-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Data Laporan",
+      "roles": [
+        "administrator",
+        "admin"
+      ]
+    },
+    {
+      "name": "Laporan",
+      "icon": "menu-icon tf-icons ri-file-paper-2-line",
+      "slug": "app-user",
+      "roles": [
+        "administrator",
+        "admin"
+      ],
+      "submenu": [
+        {
+          "url": "/dashboard/admin/laporan/tagihan",
+          "name": "Laporan Tagihan",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-file-list-3-line"
+        },
+        {
+          "url": "/dashboard/admin/laporan/tagihan/kwitansi",
+          "name": "Laporan Kwitansi",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-file-paper-2-line"
+        }
+      ]
+    },
+ 
+    {
+      "menuHeader": "Data Pekerjaan",
+      "roles": "team"
+    },
+    {
+      "name": "Pekerjaan",
+      "icon": "menu-icon tf-icons ri-briefcase-line",
+      "slug": "app-user",
+      "roles": "team",
+      "submenu": [
+        {
+          "url": "/dashboard/teknisi/jobs",
+          "name": "Pekerjaan",
+          "slug": "app-user-list",
+          "roles": "team",
+          "icon": "ri-list-check"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Data Pekerjaan Selesai",
+      "roles": "team"
+    },
+    {
+      "name": "Pekerjaan Selesai",
+      "icon": "menu-icon tf-icons ri-checkbox-circle-line",
+      "slug": "app-user",
+      "roles": "team",
+      "submenu": [
+        {
+          "url": "/dashboard/teknisi/jobs/approved-jobs",
+          "name": "Selesai",
+          "slug": "app-user-list",
+          "roles": "team",
+          "icon": "ri-check-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Data Administrasi",
+      "roles": [
+        "administrator",
+        "admin"
+      ]
+    },
+    {
+      "name": "Administrasi",
+      "icon": "menu-icon tf-icons ri-currency-line",
+      "slug": "app-user",
+      "roles": [
+        "administrator",
+        "admin"
+      ],
+      "submenu": [
+        {
+          "url": "/dashboard/admin/incomes",
+          "name": "Masuk",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-arrow-down-line"
+        },
+        {
+          "url": "/dashboard/admin/expenses",
+          "name": "Keluar",
+          "slug": "app-user-list",
+          "roles": [
+            "administrator",
+            "admin"
+          ],
+          "icon": "ri-arrow-up-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Buku Besar",
+      "roles": [
+        "administrator"
+      ]
+    },
+    {
+      "name": "Buku Besar",
+      "icon": "menu-icon tf-icons ri-book-2-line",
+      "slug": "app-user",
+      "roles": "administrator",
+      "submenu": [
+        {
+          "url": "/dashboard/admin/pembukuan/masuk",
+          "name": "Masuk",
+          "slug": "app-user-list",
+          "roles": "administrator",
+          "icon": "ri-arrow-down-line"
+        },
+        {
+          "url": "/dashboard/admin/pembukuan/keluar",
+          "name": "Keluar",
+          "slug": "app-user-list",
+          "roles": "administrator",
+          "icon": "ri-arrow-up-line"
+        },
+        {
+          "url": "/dashboard/admin/pembukuan/total",
+          "name": "Total",
+          "slug": "app-user-list",
+          "roles": "administrator",
+          "icon": "ri-calculator-line"
+        }
+      ]
+    },
+    {
+      "menuHeader": "Tagihan",
+      "roles": "customer"
+    },
+    {
+      "name": "Tagihan",
+      "icon": "menu-icon tf-icons ri-file-list-3-line",
+      "slug": "app-user",
+      "roles": "customer",
+      "submenu": [
+        {
+          "url": "dashboard/customer/tagihan",
+          "name": "Tagihan",
+          "slug": "app-user-list",
+          "roles": "customer",
+          "icon": "ri-list-check"
+        },
+        {
+          "url": "/dashboard/customer/tagihan/selesai",
+          "name": "Tagihan Lunas",
+          "slug": "app-user-list",
+          "roles": "customer",
+          "icon": "ri-checkbox-circle-line"
+        }
+      ]
+    },
+{
+      "menuHeader": "Rekening",
+      "roles": "administrator"
+    },
+    {
+      "name": "Rekening",
+      "icon": "menu-icon tf-icons ri-file-list-3-line",
+      "slug": "app-user",
+      "roles": "administrator",
+      "submenu": [
+        {
+          "url": "/dashboard/admin/rekenings",
+          "name": "Rekening",
+          "slug": "app-user-list",
+          "roles": "administrator",
+          "icon": "ri-list-check"
+        }
+      ]
+    },
+    {},
+    {}
+  ]
+}

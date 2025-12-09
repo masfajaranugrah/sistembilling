@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
+
+/**
+ * App\Models\UserDevice
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property string $device_type
+ * @property string $onesignal_id
+ * @property string $external_id
+ * @property string $aliases
+ * @property int $is_active
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @method static Builder|UserDevice newModelQuery()
+ * @method static Builder|UserDevice newQuery()
+ * @method static Builder|UserDevice query()
+ * @method static Builder|UserDevice whereCreatedAt($value)
+ * @method static Builder|UserDevice whereDeviceType($value)
+ * @method static Builder|UserDevice whereId($value)
+ * @method static Builder|UserDevice whereIsActive($value)
+ * @method static Builder|UserDevice whereOnesignalId($value)
+ * @method static Builder|UserDevice whereExternalId($value)
+ * @method static Builder|UserDevice whereAliases($value)
+ * @method static Builder|UserDevice whereUpdatedAt($value)
+ * @method static Builder|UserDevice whereUserId($value)
+ * @mixin \Eloquent
+ */
+class UserDevice extends Model
+{
+    public $table = 'user_devices';
+
+    public $fillable = [
+        'user_id',
+        'device_type',
+        'onesignal_id',
+        'external_id',
+        'aliases',
+        'is_active',
+    ];
+}
